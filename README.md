@@ -9,9 +9,9 @@ Assignment - BTSpeed
 **Method:** POST  
 **Headers:** `Content-Type: application/json`
 
-**Payload:**
+**Payload:** Example 
 ```json
 {
-    "phoneNumber": "9625728264",
+    "phoneNumber": "9625728206",
     "email": "ab@gmail.com"
 }
