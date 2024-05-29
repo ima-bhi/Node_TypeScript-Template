@@ -14,11 +14,10 @@ export default (app:Router)=>{
         // @ts-ignore
         logger.debug('Calling contact/order endpoint with body: %o', req.body);
         try {
-          console.log("b",req.body)
           const ContactControllerInstance=Container.get(ContactController);
-         const result=await ContactControllerInstance.search();
+         const contact=await ContactControllerInstance.order(req.body);
          res.status(200).json({
-          data: result,
+          data: contact,
         });
         } catch (e) {
           // eslint-disable-next-line @typescript-eslint/ban-ts-ignore

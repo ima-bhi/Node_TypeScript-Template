@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/contact/order HTTP/1.1
+content-type: application/json
+
+{
+    "phoneNumber": "9625728264",
+    "email": "abhishekrana201005@gmail.com"
+}
