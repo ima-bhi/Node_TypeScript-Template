@@ -14,14 +14,14 @@ export default async ({ expressApp }) => {
     model:require('../models/contact.model').default,
   }
 
-  const AppSettingModel={
-    name:'AppSettingModel',
-    model:require('../models/appSetting.model').default
+  const UniqueContactModel={
+    name:'UniqueContactModel',
+    model:require('../models/uniqueContact.model').default
   }
   // It returns the agenda instance because it's needed in the subsequent loaders
  await dependencyInjectorLoader({
     mongoConnection,
-    models: [ContactModel,AppSettingModel],
+    models: [ContactModel,UniqueContactModel],
   });
   Logger.info('Dependency Injector loaded');
 

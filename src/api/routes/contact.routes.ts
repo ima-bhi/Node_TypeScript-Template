@@ -7,7 +7,7 @@ export default (app:Router)=>{
 
     //create mappin in model
     route.post(
-      '/order',
+      '/identify',
       async (req: Request, res: Response, next: NextFunction) => {
         const logger = Container.get('logger');
         // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
@@ -17,7 +17,7 @@ export default (app:Router)=>{
           const ContactControllerInstance=Container.get(ContactController);
          const contact=await ContactControllerInstance.order(req.body);
          res.status(200).json({
-          data: contact,
+          contact: contact,
         });
         } catch (e) {
           // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
