@@ -1,7 +1,7 @@
 import { Router } from 'express';
-//import auth from './routes/auth.routes';       -- Example 
+import identityRoutes from './routes/contact.routes';
 export default ()=>{
     const app=Router();
-    //auth(app);   -- Example
+    identityRoutes(app);
     return app;
 }
