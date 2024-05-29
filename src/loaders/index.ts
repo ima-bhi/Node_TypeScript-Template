@@ -9,10 +9,14 @@ export default async ({ expressApp }) => {
   const mongoConnection = await mongooseLoader(config.scy.databaseURL);
   Logger.info('Mongo loaded & connected!');
   
+  const ContactModel={
+    name:'ContactModel',
+    model:require('../models/contact.model').default,
+  }
   // It returns the agenda instance because it's needed in the subsequent loaders
-  const { agenda } = await dependencyInjectorLoader({
+ await dependencyInjectorLoader({
     mongoConnection,
-    models: [],
+    models: [ContactModel],
   });
   Logger.info('Dependency Injector loaded');
 
