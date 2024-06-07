@@ -6,8 +6,8 @@ export default ({ app }: { app: express.Application }) => {
   /**
    * Health Check endpoints
    */
-  app.get('/status', (req, res) => {
-    res.status(200).end();
+  app.get('/', (req, res) => {
+    res.status(200).send(`SERVER RUNNING`);
   });
   app.head('/status', (req, res) => {
     res.status(200).end();

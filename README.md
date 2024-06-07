@@ -3,6 +3,15 @@ Assignment - BTSpeed
 
 ## Hosting Platform: Vercel
 
+### Explanation:
+
+- **Active Branch - bt:** 
+- **Steps to be Followed:** 
+     - Switch the default branch to active branch - bt.
+     - Use npm i to install dependencies.
+     - Run npm start to start the server.
+
+
 ### Identify API
 
 **Route:** `https://your-vercel-project-name.vercel.app/api/contact/identify`  
